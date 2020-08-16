@@ -1,0 +1,18 @@
+[
+    {
+        "title": " ",  
+        "url": "",
+        "type": "page/api/click/fill",
+        "method": "GET/POST/SWITCH",
+        "data": {},
+        "need_data": false,
+        "expect": [
+            {
+                "get_type": "id/name/xpath/class/tag/json/xml/value/careless",
+                "key": "",
+                "key_value": "",
+                "assert_type": "contain/equal/exist"
+            }
+        ]
+    }
+]

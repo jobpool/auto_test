@@ -1,0 +1,56 @@
+[
+    {
+        "title":"访问mail163登录页面",
+        "url": "https://mail.163.com/",
+        "type":"page",
+        "method": "GET",
+        "data": {},
+        "need_data": false,
+        "expect":[{"get_type":"careless","key":"Code","key_value":"200","assert_type":""}]
+    },
+    {
+        "title":"输入账号密码",
+        "url": "",
+        "type":"fill",
+        "method": "",
+        "data": {"form_datas":[{"name":"email","value":"jobpool"},{"name":"password","value":"password"}],"iframe_xpath":"/html/body/div[2]/div[3]/div/div[3]/div[4]/div[1]/div[1]/iframe"},
+        "need_data": false,
+        "expect":[{"get_type":"careless","key":"","key_value":"","assert_type":""}]
+    },
+    {
+        "title":"登录",
+        "url": "//*[@id='dologin']",
+        "type":"click",
+        "method": "SWITCH",
+        "data": {},
+        "need_data": false,
+        "expect":[{"get_type":"id","key":"_mail_component_32_32","key_value":"收件箱","assert_type":"contain"}]
+    },
+    {
+        "title":"点击写邮件",
+        "url": "//*[@id='_mail_component_24_24']",
+        "type":"click",
+        "method": "SWITCH",
+        "data": {},
+        "need_data": false,
+        "expect":[{"get_type":"id","key":"_mail_button_2_191","key_value":"","assert_type":"exist"}]
+    },
+    { 
+        "title":"填写邮件内容 ",
+        "url": "",
+        "type":"fill",
+        "method": "",
+        "data":  {"form_datas":[{"xpath":"//*[@id='_mail_emailinput_0_210']/input","value":"jobpool@163.com"},{"xpath":"/html/body/div[2]/div[1]/div[2]/div[1]/section/header/div[2]/div[1]/div/div/input","value":"auto email send"}]},
+        "need_data": false,
+        "expect":[{"get_type":"careless","key":"","key_value":"","assert_type":""}]
+    },
+    {
+        "title":"Send",
+        "url": "//*[@id='_mail_button_8_216']",
+        "type":"click",
+        "method": "SWITCH",
+        "data": {},
+        "need_data": false,
+        "expect":[{"get_type":"class","key":"tK1","key_value":"发送成功","assert_type":"contain"}]
+    }
+]
